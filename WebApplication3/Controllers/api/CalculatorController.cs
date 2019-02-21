@@ -30,6 +30,9 @@ namespace WebApplication3.Controllers.api
                 case "/":
                     result = request.DigA / request.DigB;
                     break;
+                case "^":
+                    result = (decimal)Math.Pow ((double)request.DigA, (double)request.DigB);
+                    break;
                 default:
                     throw new InvalidOperationException();
             }
